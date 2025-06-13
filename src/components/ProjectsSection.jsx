@@ -23,6 +23,17 @@ const projects = [
 		demoUrl: "#",
 		githubUrl: "#",
 	},
+	{
+		id: 3,
+		title: "Customer Purchase Analysis ETL Pipeline",
+		description:
+			"End-to-end ETL pipeline on Databricks to process and analyze raw transactional data, delivering actionable insights on customer purchasing patterns.",
+		image:
+			"https://www.bing.com/images/search?view=detailV2&ccid=7WxGEM6T&id=29C26A65AC50A43839287FC1334A83BC4553E804&thid=OIP.7WxGEM6TGJXbfEfPOmsVbQHaHa&mediaurl=https%3a%2f%2ficonape.com%2fwp-content%2fpng_logo_vector%2fapache-spark.png&exph=600&expw=600&q=Apache+Spark+Logo.png&simid=608045079647895056&FORM=IRPRST&ck=7A5C5FC2C41137E3FBF12EE8BF64A4D7&selectedIndex=0&itb=1", // Replace with your actual image path
+		tags: ["PySpark", "ApacheSpark", "Databricks", "Delta Lake", "SQL"],
+		demoUrl: "#",
+		githubUrl: "#",
+	},
 ];
 
 export const ProjectsSection = () => {
