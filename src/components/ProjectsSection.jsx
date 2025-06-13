@@ -10,7 +10,7 @@ const projects = [
 			"https://images.squarespace-cdn.com/content/v1/660c264373b3e915794d092f/a209821c-8150-4ca6-8459-440a705cbe2b/Medallion+architecture.png?format=1000w", // Replace with your actual image path
 		tags: ["Python", "Azure", "Big Data", "Data Engineering"],
 		demoUrl: "#",
-		githubUrl: "#",
+		githubUrl: "https://github.com/Vaiibhaav",
 	},
 	{
 		id: 2,
@@ -21,7 +21,7 @@ const projects = [
 			"https://ts4.mm.bing.net/th?id=OIP.sbecdu8O0f8gKDvsga0vZwHaEo&pid=15.1", // Replace with your actual image path
 		tags: ["Python", "SQL", "Data Quality", "Data Profiling"],
 		demoUrl: "#",
-		githubUrl: "#",
+		githubUrl: "https://github.com/Vaiibhaav",
 	},
 	{
 		id: 3,
@@ -32,7 +32,7 @@ const projects = [
 			"https://images.icon-icons.com/2699/PNG/512/apache_spark_logo_icon_170561.png", // Replace with your actual image path
 		tags: ["PySpark", "ApacheSpark", "Databricks", "Delta Lake", "SQL"],
 		demoUrl: "#",
-		githubUrl: "#",
+		githubUrl: "https://github.com/Vaiibhaav/ApacheSparkETLPipeline",
 	},
 ];
 
