@@ -1,5 +1,24 @@
-import { Code, Server, ShieldCheck } from "lucide-react";
-const resumeLink = import.meta.env.VITE_RESUME_LINK;
+import { BrainCircuit, Cpu, Server } from "lucide-react";
+
+const resumeLink = "/Vaibhav_Saxena_Resume.pdf";
+
+const highlights = [
+	{
+		icon: Server,
+		title: "Backend & Platform",
+		text: "Redesigned Keycloak auth to cut per-request auth DB queries by 75%, rebuilt onboarding with Stripe and Razorpay for 30,000+ users, and delivered HAProxy load-balancer autoscaling.",
+	},
+	{
+		icon: BrainCircuit,
+		title: "Data & AI Systems",
+		text: "Built an LLM-assisted entity-resolution engine that cut pairwise comparisons by 99%, an event-driven schema-drift service, and a data-quality framework that runs 87% faster over 8M+ rows.",
+	},
+	{
+		icon: Cpu,
+		title: "Systems & Problem Solving",
+		text: "Wrote a multithreaded C++ matching engine on a lock-free ring buffer with a FIX 4.2 layer, and earned the LeetCode Knight badge (max rating 1857).",
+	},
+];
 
 export const AboutSection = () => {
 	return (
@@ -13,19 +32,21 @@ export const AboutSection = () => {
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 					<div className="space-y-6">
 						<h3 className="text-2xl font-semibold">
-							Passionate Data Engineer & Tech Enthusiast
+							Software Engineer: Backend, Data & AI Systems
 						</h3>
 
-						<p className="text-muted-foreground">
-							Skilled in building efficient data pipelines, Data Governance and
-							cloud-based workflows, I combine a strong grasp of C++, DSA, and
-							modern data tools to create scalable solutions.
+						<p className="text-foreground/80">
+							I'm a Software Engineer at Adrosonic in Mumbai with 2 years of
+							experience designing, building and shipping production systems end
+							to end, from authentication and payments to autoscaling and data
+							platforms on Microsoft Fabric.
 						</p>
 
-						<p className="text-muted-foreground">
-							With hands-on experience in end-to-end data systems and a passion
-							for clean, optimized engineering, I’m aiming for impactful roles
-							in data engineering and infrastructure development.
+						<p className="text-foreground/80">
+							I care about clean, secure, high-performance code and strong
+							fundamentals: data structures and algorithms, operating systems,
+							networks and concurrency. I also build GenAI systems with MCP, RAG
+							and LangGraph.
 						</p>
 
 						<div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -36,7 +57,7 @@ export const AboutSection = () => {
 
 							<a
 								href={resumeLink}
-								download="Vaibhav_Saxena_CV.pdf"
+								download="Vaibhav_Saxena_Resume.pdf"
 								className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
 							>
 								Download CV
@@ -45,52 +66,19 @@ export const AboutSection = () => {
 					</div>
 
 					<div className="grid grid-cols-1 gap-6">
-						<div className="gradient-border p-6 card-hover">
-							<div className="flex items-start gap-4">
-								<div className="p-3 rounded-full bg-primary/10">
-									<Server className="h-6 w-6 text-primary" />
-								</div>
-								<div className="text-left">
-									<h4 className="font-semibold text-lg">
-										Big Data Technologies
-									</h4>
-									<p className="text-muted-foreground">
-										Building scalable data pipelines and E.T.L. solutions using modern
-										Big Data technologies like Azure.
-									</p>
+						{highlights.map((item) => (
+							<div key={item.title} className="gradient-border p-6 card-hover">
+								<div className="flex items-start gap-4">
+									<div className="p-3 rounded-full bg-primary/10">
+										<item.icon className="h-6 w-6 text-primary" />
+									</div>
+									<div className="text-left">
+										<h4 className="font-semibold text-lg">{item.title}</h4>
+										<p className="text-foreground/80">{item.text}</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div className="gradient-border p-6 card-hover">
-							<div className="flex items-start gap-4">
-								<div className="p-3 rounded-full bg-primary/10">
-									<ShieldCheck className="h-6 w-6 text-primary" />
-								</div>
-								<div className="text-left">
-									<h4 className="font-semibold text-lg">Data Governance</h4>
-									<p className="text-muted-foreground">
-										Designing data architectures, scripting solutions for data
-										quality issues, and implementing governance using tools like
-										Microsoft Purview.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="gradient-border p-6 card-hover">
-							<div className="flex items-start gap-4">
-								<div className="p-3 rounded-full bg-primary/10">
-									<Code className="h-6 w-6 text-primary" />
-								</div>
-
-								<div className="text-left">
-									<h4 className="font-semibold text-lg">Problem Solving</h4>
-									<p className="text-muted-foreground">
-										Solving complex problems with a strong command over DSA and
-										SQL.
-									</p>
-								</div>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>

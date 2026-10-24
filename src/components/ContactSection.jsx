@@ -1,4 +1,5 @@
 import {
+	Code,
 	Github,
 	Instagram,
 	Linkedin,
@@ -14,6 +15,9 @@ const linkedIn = import.meta.env.VITE_LINKEDIN_URL;
 const twitter = import.meta.env.VITE_TWITTER_URL;
 const instagram = import.meta.env.VITE_INSTAGRAM_URL;
 const github = import.meta.env.VITE_GITHUB_URL;
+const leetcode =
+	import.meta.env.VITE_LEETCODE_URL ||
+	"https://leetcode.com/u/vaibhavsaxena533/";
 
 export const ContactSection = () => {
 	return (
@@ -24,8 +28,8 @@ export const ContactSection = () => {
 				</h2>
 
 				<p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-					Have a project in mind or want to collaborate? Feel free to reach out.
-					I'm always open to discussing new opportunities.
+					I'm open to software engineering roles in backend, systems and AI.
+					Feel free to reach out about opportunities or collaborations.
 				</p>
 
 				<div className="flex flex-col items-center space-y-12">
@@ -60,17 +64,20 @@ export const ContactSection = () => {
 						<div className="pt-8">
 							<h4 className="font-medium mb-4">Connect With Me</h4>
 							<div className="flex space-x-4 justify-center">
-								<a href={linkedIn} target="_blank" rel="noopener noreferrer">
+								<a href={linkedIn} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
 									<Linkedin />
 								</a>
-								<a href={twitter} target="_blank" rel="noopener noreferrer">
+								<a href={twitter} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
 									<Twitter />
 								</a>
-								<a href={instagram} target="_blank" rel="noopener noreferrer">
+								<a href={instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
 									<Instagram />
 								</a>
-								<a href={github} target="_blank" rel="noopener noreferrer">
+								<a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
 									<Github />
+								</a>
+								<a href={leetcode} target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+									<Code />
 								</a>
 							</div>
 						</div>
